@@ -1,10 +1,6 @@
 # Facial-Emotion-Detection // ResEmoteNet + ONNX
 
-🚀 This repository is a modified version of [ResEmoteNet](https://github.com/ArnabKumarRoy02/ResEmoteNet), focusing exclusively on the **FER2013 dataset** and adding support for **ONNX inference** to enhance deployment capabilities.
-
-# Face Detection and Recognition Project
-
-This repository contains resources and code for implementing face detection and recognition using OpenCV, Haar cascades, and ONNX runtime inference.
+🚀 This repository is a modified version of [ResEmoteNet](https://github.com/ArnabKumarRoy02/ResEmoteNet), focusing exclusively on the **FER2013 dataset** and contains resources and code for implementing face detection and recognition using OpenCV, Haar cascades, and ONNX runtime inference.
 
 ## Overview
 This project includes:
