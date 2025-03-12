@@ -1,42 +1,64 @@
-# Facial-Emotion-Detection // ResEmoteNet + ONNX
+# ResEmoteNet - Real-Time Facial Emotion Recognition
 
-🚀 This repository is a modified version of [ResEmoteNet](https://github.com/ArnabKumarRoy02/ResEmoteNet), focusing exclusively on the **FER2013 dataset** and contains resources and code for implementing face detection and recognition using OpenCV, Haar cascades, and ONNX runtime inference.
+This repository provides code and resources for real-time face detection and emotion recognition using the ResEmoteNet architecture, ONNX runtime, and OpenCV.
 
 ## Overview
-This project includes:
-- Haar Cascade XML file (`haarcascade_frontalface_default.xml`) for face detection.
-- Python notebook (`onnx_inference.ipynb`) demonstrating ONNX model inference.
-- Support for handling images for facial recognition tasks.
+ResEmoteNet is a deep convolutional neural network tailored for Facial Emotion Recognition (FER). It uses:
+- Residual blocks and Squeeze-and-Excitation (SE) blocks for efficient feature extraction.
+- Haar Cascades (`haarcascade_frontalface_default.xml`) for face detection.
+- Webcam-based real-time inference scripts leveraging PyTorch and ONNX Runtime.
 
-## Repository Structure
+## Project Contents
+- `ResEmoteNet.py`: Definition of the neural network architecture.
+- `inference_webcam.py`: Python script for real-time webcam inference using PyTorch.
+- `onnx_inf_webcam.py`: Python script demonstrating ONNX model inference on webcam feed.
+
+## Structure
 ```
-├── images
-│   ├── person1 (Add images here)
-│   └── person2 (Add images here)
+├── Weights
+│   └── fer_model.pth (FER2013 weights go here)
 ├── haarcascade_frontalface_default.xml
-├── onnx_inference.ipynb
+├── ResEmoteNet.py
+├── inference_webcam.py
+├── onnx_extrat.ipynb
+├── onnx_inf_webcam.py
 └── README.md
 ```
 
-## Usage
-### Face Detection
-Utilize the provided Haar Cascade (`haarcascade_frontalface_default.xml`) to detect faces in images or video streams with OpenCV.
-
-### ONNX Model Inference
-Follow the instructions in `onnx_inference.ipynb` to perform face recognition or other tasks using ONNX models.
-
 ## Installation
 ```bash
-pip install opencv-python onnxruntime
+pip install opencv-python torch torchvision onnxruntime numpy pillow
+```
+
+## Usage
+### Real-Time Webcam Inference
+To run emotion recognition from webcam:
+
+- Using PyTorch:
+```bash
+python inference_webcam.py
+```
+
+- Using ONNX:
+```bash
+python onnx_inf_webcam.py
+```
+
+Ensure the `fer_model.pth` weight file is in the `Weights` folder.
+
+## Dependencies
+Install the necessary Python packages:
+```bash
+pip install opencv-python torch torchvision onnxruntime numpy pillow
 ```
 
 ## License
-The face detection XML provided is under the Intel License Agreement for the Open Source Computer Vision Library (OpenCV). See the XML file header for full license details.
+The Haar cascade XML is provided under the Intel License Agreement for Open Source Computer Vision Library (OpenCV). See XML file header for full details.
 
 ## Contributions
-Feel free to fork this repository, submit issues, or contribute improvements via pull requests.
+Your contributions are welcome. Please fork this repository, open issues, or submit pull requests.
 
 ---
 
-Developed with ♥ using OpenCV and ONNX Runtime.
+Crafted with ♥ for seamless emotion recognition using ResEmoteNet and OpenCV.
 
